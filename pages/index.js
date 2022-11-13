@@ -11,7 +11,7 @@ export default function Home() {
   const team = [
     {
       name:'Verónica Kulman',
-      short_description:' Docente y Mediadora especialista en gestión y resolución de Conflictos.',
+      short_description:'Abogada, Docente y Mediadora especialista en gestión y resolución de Conflictos.',
       long_description:'',
       img:'/assets/vero.jpeg',
       talents:['Comunicadora', 'Metódica', 'Positiva','Creativa', 'Resolutiva',

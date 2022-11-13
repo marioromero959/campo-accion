@@ -18,14 +18,15 @@ export default function PageLayout({children}){
                 {children}
             </main>
             {/* Esta es una forma de aplicar los estilos, solo en este componente */}
-            <style jsx>{`
-                header{
+            {/* <style jsx>{`
+                header Navbar{
+                    min-width:100%;
                     display:flex;
                     justify-content:center;
                     padding:0;
                 }            
             `}
-            </style>
+            </style> */}
         </>
     )
 }

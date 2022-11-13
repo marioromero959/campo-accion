@@ -11,13 +11,15 @@ const StyledCardContainer = styled.div`
 `;
 
 const StyledCard = styled.div`
+  font-size:20px;
   margin: 20px;
-  width: 10em;
+  width: 15em;
   height: 150px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 1px 1px 10px;
   transition: 1s;
+  color:black;
   :hover{
     color: white;
     background-color:var(--primary);

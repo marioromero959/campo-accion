@@ -2,31 +2,30 @@ import { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
+import CardTeam from '../components/CardTeam';
+
 const StyleLayoutContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  background: var(--primary);
   align-items: center;
   padding: 40px;
+  img{
+    width:300px;
+  }
+  @media (max-width:900px) {
+    img{
+      width:100%;
+    }
+    flex-direction: column;
+  }
 `;
 const StyleParagraph = styled.p`
-  color: #fff;
-`;
-const StyleTeam = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  align-items: center;
-  box-shadow: 5px 5px 10px;
-  width: 300px;
-  text-align: center;
-  max-width: 300px;
-  border-radius:15px;
-  img{
-    border-radius:15px;
-    height:200px;
-    margin:10px 0;
+  padding:10px 70px;
+  max-width:40em;
+  margin:0;
+  color: #000;
+  @media (max-width:900px) {
+    padding:30px 20px;
   }
 `;
 
@@ -35,14 +34,13 @@ export default function About(props) {
 
   return (
     <>
-      <h1>¿QUIÉNES SOMOS?</h1>
+      <h2 className="p-2">¿QUIÉNES SOMOS?</h2>
       <StyleLayoutContainer>
         <img
           src={`assets/campo_accion.png`}
           alt=""
-          style={{ width: "30em", padding: "10px  100px" }}
         />
-        <div style={{ width: "50%" }}>
+        <div>
           <StyleParagraph>
             Nos definimos como jóvenes creativos y emprendedores, que apostando
             a una formación educativa superior y continua, invertimos y
@@ -59,11 +57,11 @@ export default function About(props) {
           </StyleParagraph>
         </div>
       </StyleLayoutContainer>
-      <h2>Nuestro Equipo</h2>
+      <h2 className="p-4">NUESTRO EQUIPO</h2>
       <div
         style={{
           width: "100%",
-          margin:"20px 0",
+          margin: "20px 0",
           display: "flex",
           flexWrap: "wrap",
           alignItems: "start",
@@ -71,14 +69,23 @@ export default function About(props) {
         }}
       >
         {team?.map((person) => (
-          <StyleTeam key={person.name}>
-            <h3 style={{ margin: 0 }}>{person.name}</h3>
-            {/* {person.long_description} */}
-            <Image width="200" height="200" src={person.img} alt={person.img} />
-            {person.short_description}
-          </StyleTeam>
+          <CardTeam person={person} key={person.name}></CardTeam>
         ))}
       </div>
+
+      {/* <p className="fs-5 p-5 w-100">
+        Detrás de estos dos nombres hay una nómina fija de jóvenes
+        tercerizando sus servicios profesionales. Ellos son en quienes nos
+        apoyamos para brindar un servicio innovador, atractivo a la época y
+        adaptado a cada cliente.
+        Entre ellos contamos con un aspb
+        <strong>
+          Programador Java y Frontend, una
+          Community Manager, un Veterinario, una Contadora Pública Nacional,
+          una Licenciada en Medio Ambiente y una Licenciada Psicopedagogía y
+          Psicología.
+        </strong>
+      </p> */}
     </>
   );
 }

@@ -53,7 +53,7 @@ export default function Carousel(props){
 
     return (
         <>
-        <div style={{ background:'#000',width:'100%', height:'400px', position:'relative'}}>
+        <div style={{ background:'#000',width:'100%', height:'calc(100vh - 90px)', position:'relative'}}>
             <StyledCarouselImg priority='true' src={`/assets/${selectedImage}`} alt="" fill="true" onLoad={()=>setLoaded(true)} className={loaded ? 'loaded' : ''}/>
         </div>
         {/* <div className="buttons">
