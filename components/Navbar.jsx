@@ -20,7 +20,7 @@ export default function Navbar() {
               <li className="nav-item px-2 fs-5">
                 <Link className="nav-link" href="/about">Sobre Nosotros</Link>
               </li>
-              <li className="nav-item px-2 fs-5 dropdown">
+              {/* <li className="nav-item px-2 fs-5 dropdown">
                 <Link className="nav-link" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Servicios
                 </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
                   <li><hr className="dropdown-divider" /></li>
                   <li><a className="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </li>
+              </li> */}
               <li className="nav-item px-2 fs-5">
                 <Link className="nav-link" href="/contact">Contacto</Link>
               </li>

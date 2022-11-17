@@ -11,6 +11,10 @@ const StyledCardContainer = styled.div`
 `;
 
 const StyledCard = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
   font-size:20px;
   margin: 20px;
   width: 15em;
@@ -33,11 +37,15 @@ export default function Card({ tasks }) {
     setTask(tasks);
   }, []);
 
+  const openSubMenu =  (task) =>{
+    console.log("a",task);
+  }
+
   return (
     <>
       <StyledCardContainer>
         {task?.map((task) => (
-          <StyledCard key={task}>{task}</StyledCard>
+          <StyledCard  onClick={()=>openSubMenu(task)} key={task}>{task}</StyledCard>
         ))}
       </StyledCardContainer>
     </>

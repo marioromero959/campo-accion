@@ -11,8 +11,10 @@ const StyleTeam = styled.div`
     box-shadow:0px 0px 10px;
     margin:5px 0;
     h3{
+        font-weight:600;
         font-size:35px;
         order:1;
+        color:var(--primary);
     }
     p{
         font-size:25px !important;
@@ -24,6 +26,12 @@ const StyleTeam = styled.div`
         position:relative;
         width:20%;
         height:300px;
+        border:5px solid var(--primary);
+        border-radius:50%;
+        img{
+        border-radius:50%;
+            z-index:-1;
+        }
     }
     &:nth-child(2n+1){
         h3{order:3;}

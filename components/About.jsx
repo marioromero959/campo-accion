@@ -57,7 +57,7 @@ export default function About(props) {
           </StyleParagraph>
         </div>
       </StyleLayoutContainer>
-      <h2 className="p-4">NUESTRO EQUIPO</h2>
+      {/* <h2 className="p-4">NUESTRO EQUIPO</h2>
       <div
         style={{
           width: "100%",
@@ -73,12 +73,12 @@ export default function About(props) {
         ))}
       </div>
 
-      {/* <p className="fs-5 p-5 w-100">
+      <p className="fs-5 p-5 w-75">
         Detrás de estos dos nombres hay una nómina fija de jóvenes
         tercerizando sus servicios profesionales. Ellos son en quienes nos
         apoyamos para brindar un servicio innovador, atractivo a la época y
         adaptado a cada cliente.
-        Entre ellos contamos con un aspb
+        Entre ellos contamos con un &nbsp;
         <strong>
           Programador Java y Frontend, una
           Community Manager, un Veterinario, una Contadora Pública Nacional,

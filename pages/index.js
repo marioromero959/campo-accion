@@ -4,6 +4,7 @@ import PageLayout from "../components/PageLayout";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import About from "../components/About";
+import Services from "../components/Services";
 
 export default function Home() {
   const router = useRouter();
@@ -18,28 +19,29 @@ export default function Home() {
         'Enfocada', 'Carismática', 'Empatica']
     },
     {
-      name:'Agustin Barriola',
-      short_description:'Médico Veterinario Rural.',
-      long_description:'',
-      img:'/assets/agustin.jpeg',
-      talents:['Iniciativa', 'Aprendizaje activo', 'Liderazgo',' Sentido crítico',
-        'Resolución de problemas', 'Flexibilidad']
-    },
-    {
       name:'Jeremías Bizín',
       short_description:'Ingeniero Zootecnista (actualmente formandose como Coaching empresarial).',
       long_description:'',
       img:'/assets/jere.jpeg',
       talents:['Liderazgo','Estratégico', 'Analítico','Actitud positiva y de servicio',' Agilidad', 'Prudente']
     },
+    {
+      name:'Agustin Barriola',
+      short_description:'Médico Veterinario Rural.',
+      long_description:'',
+      img:'/assets/agustin.jpeg',
+      talents:['Iniciativa', 'Aprendizaje activo', 'Liderazgo',' Sentido crítico',
+        'Resolución de problemas', 'Flexibilidad']
+    }
   ];
-  const services = [
+  const menu = [
+    "Equipo Profesional",
     "Servicios",
-    "RR.HH",
-    "Compilance Corporativo",
-    "Consultoría y Gestión agropecuaria",
+    "Como trabajamos",
+    "Búsquedas laborales",
   ];
 
+  
   return (
     <PageLayout>
       <div className={styles.container}>
@@ -53,21 +55,24 @@ export default function Home() {
             vez más repetitivas y/u obsoletas y centrarnos en los resultados del
             bienestar laboral.
           </p>
-        </div>
-        <div>
-          <Card tasks={services}></Card>
-        </div>
         <p style={{ display: "flex", textAlign: "center", padding: "2em" }}>
           Luego de algunos años decidimos potenciar nuestras habilidades y
           ponerlas al servicio de las demandas laborales, conscientes de la
           importancia de encontrar una cultura organizacional más adecuada a
-          nuestro estilo y visión de negocio
+          nuestro estilo y visión de negocio.
         </p>
-        <About team={team}></About>
+        </div>
+        <div>
+          <Card tasks={menu}></Card>
+        </div>
+        {/* <About team={team}></About> */}
         {/* esto es como usar el router en angular */}
         {/* <button onClick={()=> router.push('/about')}> */}
         {/* Navegar */}
         {/* </button> */}
+
+        {/* <Services services={services}></Services> */}
+
       </div>
     </PageLayout>
   );
