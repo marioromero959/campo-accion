@@ -19,6 +19,19 @@ const StyledCarouselImg = styled.img`
     }
 `;
 
+const StyleP = styled.p`
+    text-align:center;
+    position:relative;
+    font-size:30px;
+    top:20em;
+    left:10%;
+    width:80%;
+    color:#fff;
+    @media (max-width:480px) {
+        top:10em;
+    }
+`;
+
 export default function Carousel(props){
     const [selectedIndex,setSelectedIndex] = useState(0) 
     const [selectedImage,setSelectedImage] = useState(props.images[0]) 
@@ -53,8 +66,13 @@ export default function Carousel(props){
 
     return (
         <>
-        <div style={{ background:'#000',width:'100%', height:'calc(100vh - 90px)', position:'relative'}}>
+        <div style={{ background:'#000',width:'100%', height:'100vh', position:'relative'}}>
             <StyledCarouselImg priority='true' src={`/assets/${selectedImage}`} alt="" fill="true" onLoad={()=>setLoaded(true)} className={loaded ? 'loaded' : ''}/>
+            <StyleP>Nuestra consultora se forma en la búsqueda por dar soluciones a los
+            vacíos generados por la automatización que experimentamos en la vida
+            laboral, con el único interés de alejarnos de las respuestas cada
+            vez más repetitivas y/u obsoletas y centrarnos en los resultados del
+            bienestar laboral.</StyleP>
         </div>
         {/* <div className="buttons">
             <StyledButton onClick={previous}> {'<'} </StyledButton>
