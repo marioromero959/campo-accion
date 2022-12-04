@@ -66,7 +66,7 @@ const StyledMenuList = styled.div`
 export default function Card({ tasks }) {
   const [task, setTask] = useState([]);
   const [subMenu, setSubMenu] = useState([]);
-  const [itemActive, setItemActive] = useState(false);
+  const [itemActive, setItemActive] = useState();
 
   const items = [
     [{ value: 'Nómina de profesionales', link: '/equipo-profesional/nomina' }],
